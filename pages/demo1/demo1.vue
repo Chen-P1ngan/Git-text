@@ -5,7 +5,6 @@
 	
 	<view>
 		{{2 + 3}}
-		{{a}}
 	</view>
 	<view>{{Date.now()}}</view>
 	<view>{{Math.random()}}</view>
