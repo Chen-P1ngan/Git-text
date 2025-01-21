@@ -1,14 +1,28 @@
 <template>
 	<view class="out">
-		<input type="text" :value="iptValue" @focus="isActive=false" @blur="isActive=true"/>
-		<image src="/static/chicken.gif" class="pic" :class="isActive?'active':''"></image>
+<!-- 		<input type="text" :value="iptValue" @focus="isActive=false" 
+		@blur="isActive=true" @input="event => iptValue = event.detail.value"/> -->
+		<input type="text" @focus="isActive=false" @blur="isActive=true"
+		v-model="iptValue" @confirm="onconfirm"/>
+		<image src="/static/chicken.gif" class="pic" 
+		:class="isActive?'active':''"></image>
+		
+		<view>预览：{{iptValue}}</view>
 	</view>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 const iptValue = ref("")
-const isActive = ref(false)
+const isActive = ref(true)
+
+function onconfirm(e){
+	console.log(e);
+}
+
+// function oninput(e){
+// 	iptValue.value = e.detail.value;
+// }
 
 // function onfocus(e){
 // 	isActive.value = false;

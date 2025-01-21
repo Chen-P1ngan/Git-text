@@ -33,6 +33,21 @@
 			{
 				"navigationBarTitleText" : "demo4"
 			}
+		},
+		{
+			"path" : "pages/demo5/demo5",
+			"style" : 
+			{
+				"navigationBarTitleText" : "热梗指南\r
+		\t\t"
+			}
+		},
+		{
+			"path" : "pages/demo6/demo6",
+			"style" : 
+			{
+				"navigationBarTitleText" : "demo6"
+			}
 		}
 	],
 	"globalStyle": {
